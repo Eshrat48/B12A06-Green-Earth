@@ -109,7 +109,7 @@ body {
 .banner-title {
     font-family: "Raleway", sans-serif;
     font-size: 45px;
-    font-weight: 800;
+    font-weight: 700;
     color: #1F2937;
     margin-bottom: 20px;
 }
@@ -135,4 +135,56 @@ body {
 
 .get-involved-button:hover {
     background-color: #FFA000;
+}
+
+/* About Campaign Section Style */
+.about-section {
+    padding: 80px 50px;
+    text-align: center;
+    background-color: #F0FDF4;
+}
+
+.about-title {
+    font-size: 40px;
+    font-weight: 600;
+    color: #1F2937;
+    margin-bottom: 50px;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-image {
+    width: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-text-container {
+    text-align: left;
+    max-width: 500px;
+}
+
+.about-description {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #1F2937;
+    margin-bottom: 20px;
+}
+
+.about-benefits {
+    padding: 0 30px;
+    margin: 0;
+}
+
+.about-benefits li {
+    font-size: 17px;
+    color: #1F2937;
+    margin-bottom: 10px;
+    line-height: 1;
 }
