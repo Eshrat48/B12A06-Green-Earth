@@ -255,9 +255,10 @@ body {
     padding: 10px;
     display: flex;
     flex-direction: column;
-    height: 400px;
+    height: 360px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     text-align: left;
+    cursor: default;
 }
 
 .tree-card:hover {
@@ -287,6 +288,19 @@ body {
     color: #4B5563;
 }
 
+.card-details-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.card-info-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .card-category-tag {
     background-color: #D1FAE5;
     color: #15803D;
@@ -295,13 +309,6 @@ body {
     padding: 6px 14px;
     border-radius: 999px;
     display: inline-block;
-    align-self: flex-start;
-}
-
-.price-cart-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .card-price-add {
@@ -361,27 +368,30 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 15px; 
+    border-bottom: none; 
     font-size: 15px;
     color: #4B5563;
+    background-color: #DCFCE7; 
+    border-radius: 10px; 
+    margin-bottom: 10px;
 }
 
-.cart-item:last-child {
-    border-bottom: none;
-    background-color: #DCFCE7;
-    border-radius: 10px;
-    padding: 10px;
+.cart-item-info {
+    display: flex;
+    flex-direction: column;
 }
 
 .cart-item-name {
     font-weight: 600;
     color: #1F2937;
+    font-size: 16px; 
 }
 
 .cart-item-price {
     font-size: 14px;
     color: #6B7280;
+    margin-top: 5px; 
 }
 
 .cart-total {
@@ -391,6 +401,14 @@ body {
     text-align: right;
     padding-top: 10px;
     border-top: 1px solid #e0e0e0;
+}
+
+.remove-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #4B5563;
+    cursor: pointer;
 }
 
 /* Modal Styles */
@@ -640,4 +658,163 @@ footer {
     color: #ffffff;
     text-align: center;
     padding: 15px 0;
+}
+
+
+/* Mobile Responsive Design */
+@media (min-width: 481px) and (max-width: 768px) {
+    /* Header Section */
+    .header {
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .plant-button {
+        display: none;
+    }
+
+    /* Banner Section */
+    .banner-section {
+        flex-direction: column;
+        padding: 20px;
+        min-height: auto;
+    }
+
+    .hero-leaf {
+        display: none;
+    }
+
+    .banner-title {
+        font-size: 38px;
+        margin-bottom: 15px;
+    }
+
+    .banner-description {
+        font-size: 17px;
+        margin-bottom: 25px;
+    }
+
+    /* Choose Your Trees Section */
+    .shop-section {
+        padding: 20px 15px;
+    }
+
+    .shop-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .categories-panel,
+    .cart-panel {
+        padding: 15px;
+    }
+
+    .trees-display-area {
+        min-height: 300px;
+    }
+
+    .tree-cards-container {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 15px;
+    }
+
+    .tree-card {
+        height: auto;
+    }
+
+    .tree-card img {
+        height: 150px; 
+    }
+
+    .card-details-wrapper {
+        flex-direction: column;
+    }
+
+    .card-info-top {
+        flex-direction: row;
+        gap: 10px;
+        justify-content: flex-start;
+    }
+
+    /* Modal Styles */
+    .modal-content {
+        margin: 5% auto;
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    .modal-content-inner {
+        flex-direction: row;
+        gap: 20px;
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    .modal-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* About Campaign Section */
+    .about-section {
+        padding: 50px 30px;
+    }
+    
+    .about-title {
+        font-size: 36px;
+        margin-bottom: 25px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .about-image {
+        width: 80%;
+    }
+
+    .about-text-container {
+        text-align: center;
+    }
+
+    /* Our Impact Section */
+    .impact-section {
+        padding: 50px 30px;
+    }
+
+    .impact-title {
+        font-size: 36px;
+        margin-bottom: 40px;
+    }
+
+    .impact-cards-container {
+        flex-direction: row;
+        flex-wrap: wrap; 
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .impact-card {
+        width: calc(50% - 20px); 
+        height: auto;
+    }
+
+    /* Plant a Tree Form Section */
+    .plant-form-section {
+        padding: 50px 30px;
+    }
+
+    .plant-form-title {
+        font-size: 36px;
+    }
+
+    .form-container {
+        padding: 40px;
+    }
 }
