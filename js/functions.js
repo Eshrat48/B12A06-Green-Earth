@@ -9,6 +9,7 @@ const cartTotal = document.getElementById("cart-total");
 const plantModal = document.getElementById("plant-modal");
 const closeModalButton = document.querySelector(".close-button");
 const modalDetails = document.getElementById("modal-details");
+const loadingSpinner = document.getElementById("loading-spinner");
 
 // Load categories
 function loadCategories(categories) {
@@ -162,18 +163,30 @@ window.onclick = function(event) {
 }
 
 async function init() {
-  try {
-    const catRes = await fetch("https://openapi.programming-hero.com/api/categories");
-    const catData = await catRes.json();
-    loadCategories(catData.categories || []);
+    showSpinner();
+    try {
+        const catRes = await fetch("https://openapi.programming-hero.com/api/categories");
+        const catData = await catRes.json();
+        loadCategories(catData.categories || []);
 
-    const plantRes = await fetch("https://openapi.programming-hero.com/api/plants");
-    const plantData = await plantRes.json();
-    allPlants = plantData.plants || [];
-    loadPlants(allPlants);
-  } catch (error) {
-    console.log("API failed:", error.message);
-  }
+        const plantRes = await fetch("https://openapi.programming-hero.com/api/plants");
+        const plantData = await plantRes.json();
+        allPlants = plantData.plants || [];
+        loadPlants(allPlants);
+    } catch (error) {
+        console.log("API failed:", error.message);
+    } finally {
+        hideSpinner();
+    }
+}
+
+// Helper functions for spinner visibility
+function showSpinner() {
+    loadingSpinner.style.display = "flex";
+}
+
+function hideSpinner() {
+    loadingSpinner.style.display = "none";
 }
 
 // Start app
