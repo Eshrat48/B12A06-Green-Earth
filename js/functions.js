@@ -6,6 +6,9 @@ const categoryList = document.getElementById("category-list");
 const treeCardsContainer = document.getElementById("tree-cards-container");
 const cartItems = document.getElementById("cart-items");
 const cartTotal = document.getElementById("cart-total");
+const plantModal = document.getElementById("plant-modal");
+const closeModalButton = document.querySelector(".close-button");
+const modalDetails = document.getElementById("modal-details");
 
 // Load categories
 function loadCategories(categories) {
@@ -42,6 +45,7 @@ function loadPlants(plants) {
     const plant = plants[i];
     const card = document.createElement("div");
     card.classList.add("tree-card");
+    card.setAttribute('data-plant-id', plant.id);
 
     // Simple card layout
     card.innerHTML = `
@@ -56,6 +60,10 @@ function loadPlants(plants) {
         </div>
       </div>
     `;
+
+    card.querySelector('.tree-card-name').addEventListener('click', () => {
+        showPlantDetails(plant.id);
+    });
 
     treeCardsContainer.appendChild(card);
   }
@@ -120,6 +128,37 @@ function renderCart() {
   }
 
   cartTotal.textContent = `Total: ৳${total}`;
+}
+
+// Show modal with plant details
+function showPlantDetails(plantId) {
+    const plant = allPlants.find(p => p.id === plantId);
+    if (!plant) return;
+
+    modalDetails.innerHTML = `
+        <div class="modal-content-inner">
+            <img src="${plant.image}" alt="${plant.name}" class="modal-image">
+            <div class="modal-info">
+                <h3 class="modal-name">${plant.name}</h3>
+                <p class="modal-category">Category: ${plant.category}</p>
+                <p class="modal-description">${plant.description}</p>
+                <p class="modal-price">Price: ৳${plant.price}</p>
+            </div>
+        </div>
+    `;
+    plantModal.style.display = "block";
+}
+
+// Close the modal when the close button is clicked
+closeModalButton.onclick = function() {
+    plantModal.style.display = "none";
+}
+
+// Close the modal when clicking outside of it
+window.onclick = function(event) {
+    if (event.target === plantModal) {
+        plantModal.style.display = "none";
+    }
 }
 
 async function init() {
