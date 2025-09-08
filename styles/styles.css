@@ -137,6 +137,234 @@ body {
     background-color: #FFA000;
 }
 
+/* Choose Your Trees Section */
+.shop-section {
+    background-color: #F0FDF4;
+    padding: 10px 10px;
+    text-align: center;
+}
+
+.shop-title {
+    font-size: 36px;
+    font-weight: 600;
+    color: #1F2937;
+    margin-bottom: 40px;
+}
+
+.shop-container {
+    display: grid;
+    grid-template-columns: 220px 1fr 250px;
+    gap: 10px;
+    max-width: 1300px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+.categories-panel {
+    padding: 5px;
+}
+
+.panel-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1F2937;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.category-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.category-list li {
+    padding: 12px 20px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    color: #4B5563;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+}
+
+.category-list li:hover {
+    background-color: #e6f5ea;
+    color: #2F883B;
+}
+
+.category-list li.active {
+    background-color: #166534;
+    color: #FFFFFF;
+}
+
+.category-list li.active::after {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+.trees-display-area {
+    width: 100%;
+}
+
+.tree-cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.tree-card {
+    background-color: #FFFFFF;
+    border: 1px solid #D1D5DB;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: left;
+}
+
+.tree-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    border-color: #15803D;
+}
+
+.tree-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    background-color: #F3F4F6;
+}
+
+.tree-card-name {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1F2937;
+    margin-bottom: 2px;
+}
+
+.tree-card-description {
+    font-size: 12px;
+    font-weight: 400;
+    color: #4B5563;
+}
+
+.card-category-tag {
+    background-color: #D1FAE5;
+    color: #15803D;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 999px;
+    display: inline-block;
+    align-self: flex-start;
+}
+
+.price-cart-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-price-add {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.card-price {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1F2937;
+}
+
+.add-to-cart-button {
+    background-color: #15803D;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-button:hover {
+    background-color: #166534;
+}
+
+.cart-panel {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #E5E7EB;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cart-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1F2937;
+    margin-bottom: 15px;
+}
+
+.cart-items {
+    text-align: left;
+    min-height: 150px;
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 15px;
+    color: #4B5563;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+    background-color: #DCFCE7;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.cart-item-name {
+    font-weight: 600;
+    color: #1F2937;
+}
+
+.cart-item-price {
+    font-size: 14px;
+    color: #6B7280;
+}
+
+.cart-total {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1F2937;
+    text-align: right;
+    padding-top: 10px;
+    border-top: 1px solid #e0e0e0;
+}
+
+
 /* About Campaign Section Style */
 .about-section {
     padding: 80px 50px;
