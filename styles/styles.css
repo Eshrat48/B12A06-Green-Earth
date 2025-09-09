@@ -734,8 +734,8 @@ footer {
     }
 
     .tree-cards-container {
-        grid-template-columns: repeat(2, 1fr); /* Two cards per row */
-        gap: 10px; /* Reduced gap to fit two cards */
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 10px; 
     }
 
     .tree-card {
@@ -751,7 +751,7 @@ footer {
     }
 
     .card-info-top {
-        flex-direction: row; /* Horizontal layout for tag and price */
+        flex-direction: row; 
         align-items: center;
         justify-content: space-between;
     }
@@ -794,13 +794,13 @@ footer {
     }
 
     .modal-content-inner {
-        flex-direction: row; /* Horizontal layout for image and info */
+        flex-direction: row; 
         gap: 10px;
         align-items: flex-start;
     }
 
     .modal-image {
-        width: 100px; /* Reduced image width to fit horizontal layout */
+        width: 100px;
         height: 100px;
     }
 
@@ -846,14 +846,14 @@ footer {
     }
 
     .impact-cards-container {
-        flex-direction: row; /* Horizontal layout for impact cards */
+        flex-direction: row; 
         flex-wrap: wrap;
         justify-content: center;
         gap: 15px;
     }
 
     .impact-card {
-        width: calc(50% - 15px); /* Two cards per row */
+        width: calc(50% - 15px); 
         height: auto;
     }
 
@@ -878,7 +878,7 @@ footer {
 
 /* Mobile Responsive Design for 481px to 767px */
 @media (min-width: 481px) and (max-width: 768px) {
-    /* Header Section */
+    /* Navbar Section */
     .header {
         flex-direction: column;
         padding: 20px;
@@ -1020,7 +1020,7 @@ footer {
         height: auto;
     }
 
-    /* Plant a Tree Form Section */
+    /* Plant a Tree Section */
     .plant-form-section {
         padding: 50px 30px;
     }

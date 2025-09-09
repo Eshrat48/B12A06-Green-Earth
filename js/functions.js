@@ -12,7 +12,6 @@ const modalDetails = document.getElementById("modal-details");
 const loadingSpinner = document.getElementById("loading-spinner");
 const treesDisplayArea = document.getElementById("trees-display-area");
 
-// Truncates text to a specified number of words
 function truncateDescription(text, wordLimit) {
     if (!text) {
         return "No description available.";
@@ -143,7 +142,7 @@ function renderCart() {
     cartTotal.textContent = `Total: ৳${total}`;
 }
 
-// Show modal with plant details
+// Show modal with details
 function showPlantDetails(plantId) {
     const plant = allPlants.find(p => p.id === plantId);
     if (!plant) return;
@@ -163,19 +162,18 @@ function showPlantDetails(plantId) {
     plantModal.style.display = "block";
 }
 
-// Close the modal when the close button is clicked
+// Close the modal 
 closeModalButton.onclick = function() {
     plantModal.style.display = "none";
 }
 
-// Close the modal when clicking outside of it
 window.onclick = function(event) {
     if (event.target === plantModal) {
         plantModal.style.display = "none";
     }
 }
 
-// Helper functions for spinner visibility
+// Spinner visibility
 function showSpinner() {
     loadingSpinner.style.display = "flex";
 }
