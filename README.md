@@ -1,25 +1,61 @@
-#### 1) What is the difference between var, let, and const?
-Var is the old way of declaring variables in JavaScript. It has some problems because it does not care much about scope (where the variable can be used). A var variable is function-scoped. This means it is available anywhere inside the whole function where it is declared. It can also be redeclared again and again without error which sometimes causes confusion or bugs.
+# GreenEarth
 
-Let is the modern way to declare variables. A let variable is block-scoped. This means it only works inside the curly braces { } where it is declared. Unlike var, it cannot be redeclared in the same block. This makes code safer and less buggy. But value can still change/update later.
+Green Earth is a fully responsive web application that allows users to browse, explore, and plant trees. Users can view tree categories, see details for each plant, add trees to a cart, and track the total price. The app features dynamic data loading from a public API, modals for details, and interactive cart functionality.  
 
-Const is also block-scoped like let. But the main difference is that the value cannot be changed/reassigned after giving a value to a const variable. It’s constant. However, if the value is an object or an array then the contents inside can change. But replacing the whole thing is not possible.
+---
 
+## Features Implemented
 
-#### 2) What is the difference between map(), forEach(), and filter()?
-map() runs through each item in an array and changes something. Then it gives back a brand-new array with those changed items. The original array remains same.
+- Responsive navigation bar with logo, menu items, and "Plant a Tree" button  
+- Hero banner with background image, title, subtitle, and a call-to-action button  
+- About Campaign section with image and text layout  
+- Our Impact section showing 3 cards with campaign statistics  
+- Plant a Tree Today section with a functional form (Name, Email, Number of Trees)  
+- Footer with copyright info  
+- Fully responsive design for mobile, tablet, and desktop 
 
-In an array forEach() runs a function on every item. It’s mainly use for printing values or making updates. It doesn’t create a new array. It always returns undefined.
+---
 
-filter() is use to test each element of an array against a given condition. Only the elements that satisfy the condition are returned in a new array. The original array remains unchanged.
+Functionalities
 
+- **Dynamic Category Loading:** Tree categories are loaded from the API on the left side  
+- **Category Click → Tree Display:** Trees for the selected category load dynamically in a 3-column card layout  
+- **Card Contents:** Each card shows image, name, short description, category, price, and Add to Cart button  
+- **Modal on Card Click:** Clicking a tree name opens a modal with full tree details  
+- **Add to Cart:** Adds tree to the cart and displays the tree name  
+- **Total Price Calculation:** Automatically calculates total price of items in the cart  
+- **Remove from Cart:** Remove tree from cart and deducts price  
+- **Loading Spinner:** Displays while data is being fetched  
+- **Active Button State:** Highlights the selected category
 
-#### 3) What are arrow functions in ES6?
-Arrow functions in ES6 are a shorter way to write functions using the "=>" symbol. This makes code cleaner. These are often used in small tasks like array methods. 
+---
 
+## Tech Stack
 
-#### 4) How does destructuring assignment work in ES6?
-Destructuring assignment in ES6 is a way to extract values from arrays or objects and assign them to variables in a single step. With arrays it assigns elements to variables based on their position. While with objects it assigns values to variables based on property names. This makes the code shorter, cleaner and easier to read. 
+- **Frontend:** HTML, CSS (Vanilla / Tailwind / DaisyUI), JavaScript  
+- **API:** [Programming Hero Open API](https://openapi.programming-hero.com/)  
+- **Dependencies:** None (Vanilla JS only)
 
-#### 5) Explain template literals in ES6. How are they different from string concatenation?
-Template literals in ES6 use backticks and allow inserting variables or expressions directly with "${}". This makes code cleaner. This can span multiple lines and make dynamic strings easier to read and write.
+---
+
+## Local Setup / Run Instructions
+
+1. **Clone the repository**
+- Client-side: git clone https://github.com/Eshrat48/B12A06-Green-Earth.git
+- cd B12A06-Green-Earth
+
+2. **Open index.html**
+- You can simply open index.html in your browser to view the project
+
+**Notes:**
+
+No server or npm installation required since this is a Vanilla JS project
+  
+---
+
+## Live Demo
+
+- **Live Site:** https://eshrat48.github.io/B12A06-Green-Earth/
+
+**Repository:** 
+- GitHub repository: https://github.com/Eshrat48/B12A06-Green-Earth.git
